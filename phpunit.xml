@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        bootstrap ="vendor/autoload.php"
+        backupGlobals = "false"
+        backupStaticAttributes="false"
+        colors="true"
+        processIsolation="false"
+        >
+
+    <testsuites>
+        <testsuite name="Mockery Test Suite">
+            <directory suffix="Test.php">tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
