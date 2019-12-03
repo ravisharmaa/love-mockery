@@ -9,13 +9,15 @@ use App\Exceptions\EmailCouldNotBeSent;
 
 class EmailSender implements EmailServiceProvider
 {
+    /**
+     * @param $personTobeEmailed
+     *
+     * @return bool
+     *
+     * @throws EmailCouldNotBeSent
+     */
     public function send($personTobeEmailed)
     {
-         try {
-             mail($personTobeEmailed, 'Hello from mockery', 'This is testing of mocks');
-         } catch (EmailCouldNotBeSent $emailCouldNotBeSent) {
-
-         }
-
+        $mail = mail($personTobeEmailed, 'Hello from mockery', 'This is testing of mocks');
     }
 }

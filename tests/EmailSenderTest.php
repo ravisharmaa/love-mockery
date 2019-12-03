@@ -39,7 +39,7 @@ class EmailSenderTest extends TestCase
 
         $stubEmailSender = $this->createStub(\App\EmailSender::class);
 
-        $stubEmailSender->method('send')->willThrowException(new EmailCouldNotBeSent());
+        $stubEmailSender->method('send')->willReturn(new EmailCouldNotBeSent());
 
         $fakeLogWriter = Mockery::mock(\App\LogWriter::class);
 
